@@ -39,7 +39,8 @@ public class Basics {
          *    (Relevant reading: 1.1.3. Printing things)
          */
         System.out.println(7 + 5);
-
+        System.out.println("Hello World!");
+        // Completed
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
@@ -57,7 +58,8 @@ public class Basics {
          *
          *    (Relevant reading: 1.2. Variables and Types)
          */
-
+        int my_variable = 100;
+        // completed
         /*
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
@@ -87,6 +89,9 @@ public class Basics {
          *    (Relevant reading: 1.8.2. for Loops)
          */
 
+        for(int i = 10; i >= 0; i--){
+            System.out.println("Current count: " + i);
+        }
         /*
          * TODO (Task 3): Create a for-loop that loops from 10 to 0, printing
          *                the following at each iteration:
@@ -100,6 +105,7 @@ public class Basics {
          * Current count: 0
          */
 
+        System.out.println(split("Idol Long Oolong Vertical Europe University Toyota"));
 
     }
 
@@ -143,7 +149,11 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
 
         // Fill in the rest of the body here
+        String strArr[] =  to_split.split(" ");
+        for(String temp: strArr){
+            ret.append(temp.charAt(0));
 
+        }
         return ret.toString();
     }
 
@@ -163,7 +173,17 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
+        int n = arr.length;
 
+        if (n==1 || n == 0){
+            return current_sum;
+        }
+
+        for(int i = 1; i <= n -1; i = i + 2){
+
+            current_sum += arr[i];
+        }
+        // completed
         /* TODO (Task 5): Complete this method body using a for-loop.
          *                You can find the length of an array by using the
          *                .length attribute (e.g. arr.length)
